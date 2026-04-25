@@ -1205,9 +1205,3 @@ MIT License - See LICENSE file for details.
 - **Clerk** - For authentication services
 
 ---
-
-<div align="center">
-  <b>Built with ❤️ for Cloudy Hill Cottage</b>
-  <br>
-  <i>Sooriyagahawatte Kithalella, Ella 90090, Sri Lanka</i>
-</div>
