@@ -107,19 +107,6 @@ We developed an AI-powered system that:
 
 ### Component Overview (6 Main Components)
 
-This is a **single-property booking system** for Cloudy Hill Cottage with two user roles:
-- **Admin**: Full access to manage rooms, bookings, reviews, payments, and experiences
-- **Guest**: Can browse, book rooms, make payments, and submit reviews
-
-| # | Component | Description | Team Member |
-|---|-----------|-------------|-------------|
-| 1 | **User Management** | Authentication, profiles, role management (Admin/Guest) | Member 1 |
-| 2 | **Room Management** | Room inventory, images, amenities for Cloudy Hill Cottage | Member 2 |
-| 3 | **Booking Management** | Reservations, availability, guest scheduling | Member 3 |
-| 4 | **Review Management** | Guest feedback, ratings, admin responses | Member 4 |
-| 5 | **Payment Management** | Transactions, refunds, receipts | Member 5 |
-| 6 | **Experience Management** | Activities, packages (cooking class, hikes, etc.) | Member 6 |
-
 ---
 
 ### 1. User Management (`/api/user`)
@@ -1153,42 +1140,6 @@ POST /api/ai/chat
   "isCrisisMode": false,
   "negotiationData": null
 }
-```
-
----
-
-## 👥 Team Distribution
-
-<div align="center">
-    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/People%20Holding%20Hands.png" alt="Team" width="34" height="34" />
-    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Clipboard.png" alt="Modules" width="34" height="34" />
-    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Brain.png" alt="AI" width="34" height="34" />
-</div>
-
-| Student ID | Team Member | Module Ownership |
-|------------|-------------|------------------|
-| IT24104118 | Jayakody J.A.B.S. | User Management |
-| IT24101566 | Madhusanka K.B.D. | Review Management / AI Integration |
-| IT24100738 | Udawaththa D.D.E | Experience Management |
-| IT23286146 | Ayendri V.L. | Room Management |
-| IT24102954 | Vaathuman G. | Booking Management |
-| IT24103124 | Walawwaththage H.D.N. | Payment Management |
-
----
-
-## 👥 Contributors
-
-### Group Project Ownership
-
-This repository represents a collaborative academic group project delivered by a 6-member development team.
-
-### Shared Engineering Contributions
-
-- End-to-end MERN application implementation
-- Multi-agent AI service integration (LangGraph workflow, sentiment, negotiation, GraphRAG)
-- Repository-wide testing, debugging, and refactoring
-- API hardening, validation updates, and quality improvements
-
 ---
 
 ## 📄 License
@@ -1199,7 +1150,6 @@ MIT License - See LICENSE file for details.
 
 ## 🙏 Acknowledgments
 
-- **Cloudy Hill Cottage, Ella** - For inspiring this project
 - **Ollama** - For local LLM inference
 - **LangChain** - For LLM orchestration
 - **Clerk** - For authentication services
