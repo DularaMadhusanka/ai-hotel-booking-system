@@ -10,7 +10,7 @@ $clientDir = Join-Path $root "client"
 $aiDir = Join-Path $root "ai-service"
 
 if (!(Test-Path $serverDir) -or !(Test-Path $clientDir) -or !(Test-Path $aiDir)) {
-  Write-Host "Required folders not found. Run this script from Hotel_Booking_System root." -ForegroundColor Red
+  Write-Host "Required folders not found under the script directory '$root'." -ForegroundColor Red
   exit 1
 }
 

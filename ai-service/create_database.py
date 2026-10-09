@@ -9,7 +9,7 @@ import shutil
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CHROMA_PATH = os.path.join(BASE_DIR, "chroma")
-DATA_PATH = os.path.join(BASE_DIR, "data", "books")
+DATA_PATH = os.path.join(BASE_DIR, "data", "docs")
 
 
 def main():
@@ -23,7 +23,7 @@ def generate_data_store():
 
 
 def load_documents():
-    loader = DirectoryLoader(DATA_PATH, glob="*.md")
+    loader = DirectoryLoader(DATA_PATH, glob="**/*.md")
     documents = loader.load()
     return documents
 
@@ -37,11 +37,6 @@ def split_text(documents: list[Document]):
     )
     chunks = text_splitter.split_documents(documents)
     print(f"Split {len(documents)} documents into {len(chunks)} chunks.")
-
-    document = chunks[10]
-    print(document.page_content)
-    print(document.metadata)
-
     return chunks
 
 

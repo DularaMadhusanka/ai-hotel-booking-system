@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CHROMA_PATH = os.path.join(BASE_DIR, "chroma")
 
 # System prompts for different modes
-DEFAULT_SYSTEM_PROMPT = """You are a friendly, professional concierge at Grand Vista Hotel. Answer the guest's question naturally and conversationally.
+DEFAULT_SYSTEM_PROMPT = """You are a friendly, professional concierge at Cloudy Hill Cottage in Ella, Sri Lanka. Answer the guest's question naturally and conversationally.
 
 Hotel Information:
 {context}
@@ -46,7 +46,7 @@ class AdvancedHotelChatbot:
         self.knowledge_graph = KnowledgeGraph()
         
         print("\n" + "="*70)
-        print("  GRAND VISTA HOTEL - ADVANCED CHATBOT ASSISTANT")
+        print("  CLOUDY HILL COTTAGE - ADVANCED CHATBOT ASSISTANT")
         print("  Features: Dynamic Pricing • Sentiment Intelligence • GraphRAG")
         print("="*70)
         print("\nWelcome! I'm your intelligent hotel concierge.")
@@ -228,7 +228,7 @@ Make it feel like a personal recommendation from a friend."""
         results = self.db.similarity_search(user_input, k=3)
         
         if not results:
-            return "I couldn't find specific information about that. Please contact our front desk at +1 (212) 555-0100 for assistance."
+            return "I couldn't find specific information about that. Please contact Cloudy Hill Cottage at +94 77 123 4567 for assistance."
         
         context_text = "\n\n".join([doc.page_content for doc in results])
         
@@ -251,7 +251,7 @@ Make it feel like a personal recommendation from a friend."""
                     continue
                 
                 if user_input.lower() in ['quit', 'exit', 'bye', 'goodbye']:
-                    print("\n🏨 Assistant: Thank you for choosing Grand Vista Hotel! Have a wonderful stay!")
+                    print("\n🏨 Assistant: Thank you for choosing Cloudy Hill Cottage! Have a wonderful stay!")
                     break
                 
                 # Detect intent and route to appropriate handler

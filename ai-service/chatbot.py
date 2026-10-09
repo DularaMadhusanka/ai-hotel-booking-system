@@ -8,7 +8,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CHROMA_PATH = os.path.join(BASE_DIR, "chroma")
 
-CHAT_TEMPLATE = """You are a friendly concierge at Grand Vista Hotel. Answer the guest's question naturally and professionally, 
+CHAT_TEMPLATE = """You are a friendly concierge at Cloudy Hill Cottage in Ella, Sri Lanka. Answer the guest's question naturally and professionally,
 as if you work at the hotel and have this knowledge. Do NOT mention "context", "according to the information", or "based on".
 Just answer directly and conversationally like a real hotel staff member would.
 
@@ -22,10 +22,10 @@ Your response (speak naturally as hotel staff):"""
 
 def main():
     print("\n" + "="*60)
-    print("    GRAND VISTA HOTEL - CHATBOT ASSISTANT")
+    print("    CLOUDY HILL COTTAGE - CHATBOT ASSISTANT")
     print("="*60)
     print("\nWelcome! I'm your hotel concierge assistant.")
-    print("Ask me anything about Grand Vista Hotel.")
+    print("Ask me anything about Cloudy Hill Cottage.")
     print("Type 'quit' or 'exit' to end the conversation.\n")
     
     # Prepare the DB
@@ -46,14 +46,14 @@ def main():
                 continue
                 
             if user_input.lower() in ['quit', 'exit', 'bye', 'goodbye']:
-                print("\n🏨 Assistant: Thank you for choosing Grand Vista Hotel! Have a great day!")
+                print("\n🏨 Assistant: Thank you for choosing Cloudy Hill Cottage! Have a great day!")
                 break
             
             # Search the DB (using regular similarity search to avoid score warnings)
             results = db.similarity_search(user_input, k=3)
             
             if len(results) == 0:
-                print("\n🏨 Assistant: I couldn't find relevant information about that. Please contact our front desk at +1 (212) 555-0100 for more help.")
+                print("\n🏨 Assistant: I couldn't find relevant information about that. Please contact Cloudy Hill Cottage at +94 77 123 4567 for more help.")
                 continue
             
             # Get context from results

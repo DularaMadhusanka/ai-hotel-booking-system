@@ -1,5 +1,5 @@
 """
-Grand Vista Hotel - Emotion-Adaptive Chatbot UI
+Cloudy Hill Cottage - Emotion-Adaptive Chatbot UI
 Built with Streamlit & Affective Computing
 Sentiment-driven UI changes (colors, fonts, emojis, layout)
 """
@@ -18,7 +18,7 @@ from graphrag_engine import KnowledgeGraph, format_graph_context
 
 # Page configuration
 st.set_page_config(
-    page_title="Grand Vista Hotel - AI Concierge",
+    page_title="Cloudy Hill Cottage - AI Concierge",
     page_icon="🏨",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -123,7 +123,7 @@ class EmotionTheme:
         """Get context-appropriate greeting"""
         greetings = {
             "happy": "I love your energy! How can I make your stay even better?",
-            "neutral": "Welcome to Grand Vista Hotel. How may I assist you today?",
+            "neutral": "Welcome to Cloudy Hill Cottage. How may I assist you today?",
             "negative": "I hear you're having trouble. Let me help fix this for you.",
             "angry": "I sincerely apologize for the inconvenience. Your concern is my priority."
         }
@@ -456,7 +456,7 @@ def handle_general_info(user_input: str) -> str:
     results = st.session_state.db.similarity_search(user_input, k=3)
     
     if not results:
-        return "I couldn't find that information. Please call our front desk at +1 (212) 555-0100."
+        return "I couldn't find that information. Please contact Cloudy Hill Cottage at +94 77 123 4567."
     
     context_text = "\n\n".join([doc.page_content for doc in results])
     
@@ -507,7 +507,7 @@ def main():
     
     with col2:
         st.markdown(f"<div class='avatar'>{avatar}</div>", unsafe_allow_html=True)
-        st.markdown(f"<h1 style='text-align: center; color: {theme['primary_color']};'>Grand Vista Hotel</h1>", unsafe_allow_html=True)
+        st.markdown(f"<h1 style='text-align: center; color: {theme['primary_color']};'>Cloudy Hill Cottage</h1>", unsafe_allow_html=True)
         st.markdown(f"<p style='text-align: center; font-size: 1.1em; color: {theme['text_color']};'><b>AI Concierge Assistant</b></p>", unsafe_allow_html=True)
     
     # Sentiment indicator
@@ -631,7 +631,7 @@ def main():
         
         st.markdown("### ℹ️ About")
         st.markdown("""
-        **Grand Vista Hotel AI Concierge**
+        **Cloudy Hill Cottage AI Concierge**
         
         Advanced features:
         - Negotiator Bot

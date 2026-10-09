@@ -1,9 +1,7 @@
 # Dependencies
 node_modules/
-client/node_modules/
-server/node_modules/
 
-# Python environments and caches
+# Python environments and generated files
 .venv/
 venv/
 env/
@@ -13,69 +11,39 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.coverage
+htmlcov/
 .ipynb_checkpoints/
 
-# Environment variables and local overrides
+# Local configuration and secrets
 .env
 .env.*
 !.env.example
-server/.env
-client/.env
 *.local
 
-# Build outputs and caches
+# Build output and caches
 build/
 dist/
 dist-ssr/
-client/dist/
 .cache/
 .vite/
 
-# Logs and runtime artifacts
+# Generated AI/vector database data
+ai-service/chroma/
+
+# Logs
 logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-client/*.log
-server/*.log
-ai-service/*.log
 
-# README files (keep only root README.md)
-**/README.md
-!README.md
-
-# Unnecessary Python files
-test_*.py
-*_test.py
-eval_*.py
-demo_*.py
-*_demo.py
-ai-service/test_advanced_features.py
-create_test*.js
-seedData.js
-**/DEMO_*.md
-
-# Evaluation folders and outputs
-**/evaluation/
-**/evaluations/
-**/output/
-**/outputs/
-
-# AI/generated data
-ai-service/chroma/
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# IDE/editor files
+# Editor and operating system files
 .vscode/
 .idea/
 *.swp
 *.swo
 *.suo
-*.ntvs*
-*.njsproj
-*.sln
+.DS_Store
+Thumbs.db
